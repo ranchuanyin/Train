@@ -16,4 +16,13 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     public Long getCount() {
         return memberMapper.selectCount(null);
     }
+
+    @Override
+    public Long register(String mobile) {
+        Member member = new Member();
+        member.setId(System.currentTimeMillis());
+        member.setMobile(mobile);
+        memberMapper.insert(member);
+        return member.getId();
+    }
 }

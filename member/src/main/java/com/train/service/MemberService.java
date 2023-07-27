@@ -5,4 +5,6 @@ import com.train.entry.Member;
 
 public interface MemberService extends IService<Member> {
     Long getCount();
+
+    Long register(String mobile);
 }
