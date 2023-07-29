@@ -3,6 +3,7 @@ package com.train.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.train.entry.Passenger;
+import com.train.req.PassengerSaveReq;
 
 /**
  * @author 冉船银
@@ -10,5 +11,5 @@ import com.train.entry.Passenger;
  * @createDate 2023-07-29 13:04:41
  */
 public interface PassengerService extends IService<Passenger> {
-
+    void savePassenger(PassengerSaveReq req);
 }
