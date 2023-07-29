@@ -2,8 +2,11 @@ package com.train.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.train.common.resp.PageResp;
 import com.train.entry.Passenger;
+import com.train.req.PassengerQueryReq;
 import com.train.req.PassengerSaveReq;
+import com.train.resp.PassengerQueryResp;
 
 /**
  * @author 冉船银
@@ -12,4 +15,6 @@ import com.train.req.PassengerSaveReq;
  */
 public interface PassengerService extends IService<Passenger> {
     void savePassenger(PassengerSaveReq req);
+
+    PageResp<PassengerQueryResp> queryList(PassengerQueryReq req);
 }

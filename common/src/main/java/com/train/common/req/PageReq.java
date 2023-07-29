@@ -1,4 +1,4 @@
-package com.train.common.resp;
+package com.train.common.req;
 
 
 import jakarta.validation.constraints.Max;

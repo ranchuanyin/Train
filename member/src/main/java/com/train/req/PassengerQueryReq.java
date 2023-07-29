@@ -1,7 +1,7 @@
 package com.train.req;
 
 
-import com.train.common.resp.PageReq;
+import com.train.common.req.PageReq;
 
 public class PassengerQueryReq extends PageReq {
 

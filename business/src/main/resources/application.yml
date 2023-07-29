@@ -1,0 +1,20 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /business
+spring:
+  datasource:
+    username: train_business
+    password: 1213707943
+    url: jdbc:mysql://43.138.61.70:3306/train_business?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driverClassName: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  global-config:
+    banner: false
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+logging:
+  level:
+    com.train.mapper: debug
