@@ -8,7 +8,7 @@ spring:
   datasource:
     username: train_batch
     password: 1213707943
-    url: jdbc:mysql://43.138.61.70:3306/train_batch?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://******:3306/train_batch?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driverClassName: com.mysql.cj.jdbc.Driver
     hikari:
       max-lifetime: 120000
