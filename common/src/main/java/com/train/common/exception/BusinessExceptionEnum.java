@@ -37,6 +37,6 @@ public enum BusinessExceptionEnum {
     public String toString() {
         return "BusinessExceptionEnum{" +
                 "desc='" + desc + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

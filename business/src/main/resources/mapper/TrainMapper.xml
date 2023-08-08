@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.train.business.mapper.TrainMapper">
 
-    <resultMap id="BaseResultMap" type="com.train.business.domain.Train">
+    <resultMap id="BaseResultMap" type="com.train.domain.Train">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="code" column="code" jdbcType="VARCHAR"/>
         <result property="type" column="type" jdbcType="CHAR"/>

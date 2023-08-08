@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        namespace: c3392fb7-cdf4-4186-ae82-83a32b2cbb68
+        serverAddr: localhost:8848
+        fileExtension: yml

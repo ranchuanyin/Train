@@ -39,6 +39,7 @@ export default defineComponent({
          */
         const queryAllStation = () => {
             axios.get("/business/admin/station/query-all").then((response) => {
+
                 let data = response.data;
                 if (data.success) {
                     stations.value = data.content;

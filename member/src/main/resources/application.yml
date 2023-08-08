@@ -4,6 +4,15 @@ server:
     context-path: /member
 spring:
   datasource:
+    hikari:
+      connection-timeout: 10000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      read-only: false
     username: train_member
     password: 1213707943
     url: jdbc:mysql://43.138.61.70:3306/train_member?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai

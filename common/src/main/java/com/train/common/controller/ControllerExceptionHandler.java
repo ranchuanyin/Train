@@ -15,26 +15,34 @@ public class ControllerExceptionHandler {
 
     /**
      * 所有异常统一处理
+     *
+     * @param e
+     * @return
      */
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public CommonResp exceptionHandler(Exception e) throws Exception {
-
+        // LOG.info("seata全局事务ID: {}", RootContext.getXID());
+        // // 如果是在一次全局事务里出异常了，就不要包装返回值，将异常抛给调用方，让调用方回滚事务
+        // if (StrUtil.isNotBlank(RootContext.getXID())) {
+        //     throw e;
+        // }
         CommonResp commonResp = new CommonResp();
         LOG.error("系统异常：", e);
         commonResp.setSuccess(false);
         commonResp.setMessage("系统出现异常，请联系管理员");
-
         return commonResp;
     }
 
     /**
-     * 业务统一处理
+     * 业务异常统一处理
+     *
+     * @param e
+     * @return
      */
     @ExceptionHandler(value = BusinessException.class)
     @ResponseBody
-    public CommonResp exceptionHandler(BusinessException e) throws Exception {
-
+    public CommonResp exceptionHandler(BusinessException e) {
         CommonResp commonResp = new CommonResp();
         LOG.error("业务异常：{}", e.getE().getDesc());
         commonResp.setSuccess(false);
@@ -44,7 +52,6 @@ public class ControllerExceptionHandler {
 
     /**
      * 校验异常统一处理
-     *
      * @param e
      * @return
      */
@@ -60,7 +67,6 @@ public class ControllerExceptionHandler {
 
     /**
      * 校验异常统一处理
-     *
      * @param e
      * @return
      */

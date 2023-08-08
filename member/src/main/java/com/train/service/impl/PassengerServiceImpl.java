@@ -80,7 +80,7 @@ public class PassengerServiceImpl extends ServiceImpl<PassengerMapper, Passenger
 
     public List<PassengerQueryResp> queryMine() {
         LambdaQueryWrapper<Passenger> wrapper = new LambdaQueryWrapper<>();
-        wrapper.orderByAsc(Passenger::getName).eq(Passenger::getId, LoginMemberContext.getId());
+        wrapper.orderByAsc(Passenger::getName).eq(Passenger::getMemberId, LoginMemberContext.getId());
         List<Passenger> list = passengerMapper.selectList(wrapper);
         return BeanUtil.copyToList(list, PassengerQueryResp.class);
     }

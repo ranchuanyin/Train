@@ -46,7 +46,7 @@
                         :style="{background: (sell > 0 ? '#FF9900' : '#999999')}"
                         style="text-align: center;
                       border: 2px solid white;
-                      background: grey;
+
                       padding: 0 4px;
                       color: white;
                       ">{{ col }}
@@ -141,6 +141,7 @@ export default defineComponent({
             }
 
             train.value = _train;
+            console.log(train.value)
         }
 
         onMounted(() => {

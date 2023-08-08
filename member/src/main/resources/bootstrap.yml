@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: member
+  cloud:
+    nacos:
+      config:
+        namespace: c3392fb7-cdf4-4186-ae82-83a32b2cbb68
+        serverAddr: localhost:8848
+        fileExtension: yml
+#seata:
+#  tx-service-group: train-group
+#  config:
+#    type: nacos
+#    nacos:
+#      dataId: seataServer.properties
+#      group: SEATA_GROUP
+#      namespace: c3392fb7-cdf4-4186-ae82-83a32b2cbb68
+#      password: nacos
+#      server-addr: 127.0.0.1:8848
+#      username: nacos
+#  registry:
+#    type: nacos
+#    nacos:
+#      application: seata-server
+#      group: SEATA_GROUP
+#      namespace: c3392fb7-cdf4-4186-ae82-83a32b2cbb68
+#      password: nacos
+#      server-addr: 127.0.0.1:8848
+#      username: nacos

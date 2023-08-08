@@ -8,6 +8,8 @@ import com.train.req.PassengerQueryReq;
 import com.train.req.PassengerSaveReq;
 import com.train.resp.PassengerQueryResp;
 
+import java.util.List;
+
 /**
  * @author 冉船银
  * @description 针对表【passenger(乘车人)】的数据库操作Service
@@ -17,4 +19,6 @@ public interface PassengerService extends IService<Passenger> {
     void savePassenger(PassengerSaveReq req);
 
     PageResp<PassengerQueryResp> queryList(PassengerQueryReq req);
+
+    List<PassengerQueryResp> queryMine();
 }
